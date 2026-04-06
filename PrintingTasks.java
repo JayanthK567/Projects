@@ -32,12 +32,12 @@ public class PrintingTasks {
             System.out.println("Job Execution Details: ");
             for(String job : queue){
                 float jobDuration = data.get(job) / speed;
-                float waitingTime = currentTime; // Time spent before this job
-                float turnaroundTime = waitingTime + jobDuration; // Total time until finished
+                float waitingTime = currentTime;
+                float turnaroundTime = waitingTime + jobDuration;
                 
                 System.out.println(job + ": waiting time = " + waitingTime + "min, Turnaround time = " + turnaroundTime + "min");
                 
-                currentTime = turnaroundTime; // Move the clock forward
+                currentTime = turnaroundTime;
             }
         }
     }
