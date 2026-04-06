@@ -15,7 +15,7 @@ public class StudentEnrollment {
         courseStudents.put("DataStuctures", new ArrayList<>());
         courseStudents.put("DBMS", new ArrayList<>());
     }
-    private static void register(){ //done
+    private static void register(){
         System.out.print("Enter student ID: ");
         String ID = scanner.nextLine();
         if(register.containsKey(ID)){
@@ -50,7 +50,7 @@ public class StudentEnrollment {
             System.out.println("Course does not exist");
         }
     }
-    private static void display(){ //done
+    private static void display(){
         for(String course : courseStudents.keySet()){
             System.out.println(course + " -> " + (courseStudents.get(course)).size());
         }
